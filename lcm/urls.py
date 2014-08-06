@@ -10,4 +10,5 @@ urlpatterns = patterns('lifecodemohit.views',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'home'),
+    url(r'^index$', 'index'),
 )

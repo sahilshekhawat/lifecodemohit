@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Schools</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <table>
+    {% if result != "Wrong pincode" %}
+	{% for row in result %}
+	<tr>
+    {% for entry in row %}
+    <td>
+    	{{ entry }}
+    </td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    {% else %}
+    <p>Wrong pincode</p>
+    {% endif %}
+
+    </table>
+</body>
+</html>
